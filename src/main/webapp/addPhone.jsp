@@ -16,7 +16,7 @@
 	<p>Add new product <hr/></p> 
 	
 	<div>
-		<form>
+		<form action="add-phone">
 			<table>
 				<tr>
 					<td>Product name</td>
@@ -30,7 +30,7 @@
 				
 				<tr>
 					<td>Unit in stock</td>
-					<td><input type="text" name="productName"></td>
+					<td><input type="text" name="unitInStock"></td>
 				</tr>
 				
 				<tr>
