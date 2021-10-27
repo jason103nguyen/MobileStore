@@ -1,5 +1,8 @@
 package com.phuongnt.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -42,6 +45,21 @@ public class PhoneController {
 		
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("addPhone");
+		
+		return mv;
+		
+	}
+	
+	@RequestMapping("/show-phone")
+	public ModelAndView showPhone(HttpServletRequest request, HttpServletResponse response) {
+		
+		PhoneService phoneService = new PhoneService();
+		List<PhoneDto> listPhone = new ArrayList<>();
+		listPhone = phoneService.readAll();
+		
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("showPhone");
+		mv.addObject("listPhone", listPhone);
 		
 		return mv;
 		
