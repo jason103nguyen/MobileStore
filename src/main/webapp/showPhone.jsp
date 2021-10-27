@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-
+    pageEncoding="ISO-8859-1" isELIgnored="false"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,6 +13,21 @@
 		<p>All the available products in our store</p>
 	</div>
 
+	<div>
+		<table>
+			<tr>
+				<th>Name</th>
+				<th>Unit price</th>
+			</tr>
+			
+			<c:forEach items="${listPhone}" var="phone">
+				<tr>
+					<td>${phone.getName()}</td>
+					<td>${phone.getUnitPrice()}</td>
+				</tr>
+			</c:forEach>
+		</table>
+	</div>
 </body>
 </html>
 
