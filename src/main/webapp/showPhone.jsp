@@ -18,12 +18,25 @@
 			<tr>
 				<th>Name</th>
 				<th>Unit price</th>
+				<th>Unit price</th>
+				<th>Unit in stock</th>
+				<th>Description</th>
+				<th>Manufacturer</th>
+				<th>Category</th>
+				<th>Condition</th>
+				<th>Image</th>
 			</tr>
 			
 			<c:forEach items="${listPhone}" var="phone">
 				<tr>
-					<td>${phone.getName()}</td>
-					<td>${phone.getUnitPrice()}</td>
+					<td><c:out value="${phone.getName()}"/></td>
+					<td><c:out value="${phone.getUnitPrice()}"/></td>
+					<td><c:out value="${phone.getUnitInStock()}"/></td>
+					<td><c:out value="${phone.getDescription()}"/></td>
+					<td><c:out value="${phone.getManufacturer()}"/></td>
+					<td><c:out value="${phone.getCategory()}"/></td>
+					<td><c:out value="${phone.getCondition()}"/></td>
+					<td><c:out value="${phone.getImage()}"/></td>
 				</tr>
 			</c:forEach>
 		</table>

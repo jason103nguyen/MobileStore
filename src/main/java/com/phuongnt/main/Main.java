@@ -1,7 +1,7 @@
 package com.phuongnt.main;
 
 import com.phuongnt.dto.PhoneDto;
-import com.phuongnt.service.PhoneService;
+import com.phuongnt.service.PhoneServiceImpl;
 
 public class Main {
 
@@ -9,7 +9,7 @@ public class Main {
 		PhoneDto phoneDto = new PhoneDto();
 		phoneDto.setName("IPHONE XS MAX");
 		
-		PhoneService ps = new PhoneService();
+		PhoneServiceImpl ps = new PhoneServiceImpl();
 		ps.create(phoneDto);
 		
 		PhoneDto phoneDtoOut = ps.readOne(1);

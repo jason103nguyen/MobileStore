@@ -13,7 +13,7 @@ import org.hibernate.query.Query;
 
 import com.phuongnt.util.HibernateUtil;
 
-public class GenericDao<T> {
+public class GenericDao<T> implements InterfaceDao<T> {
 
     private Class<T> entityClass;
 
