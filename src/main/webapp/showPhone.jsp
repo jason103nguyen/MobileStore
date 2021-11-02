@@ -6,6 +6,23 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+	<style>
+		table {
+			font-family: Arial, sans-serif;
+			border-collapse: collapse;
+			width: 100%;
+		}
+
+		td, th {
+			border: 1px solid #dddddd;
+			text-align: left;
+			padding: 8px;
+		}
+
+		tr:nth-child(even) {
+			background-color: #dddddd;
+		}
+	</style>
 </head>
 <body style="width:50%; margin: auto;">
 	<div style="background-color: #EEEEEE; padding: 20px">
